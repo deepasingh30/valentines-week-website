@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate Day - Valentine's Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍫</text></svg>">
+</head>
+<body class="chocolate">
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg">
+    <span class="heart">🍫</span>
+    <span class="heart">🤎</span>
+    <span class="heart">🍫</span>
+    <span class="heart">💕</span>
+    <span class="heart">🍫</span>
+    <span class="heart">🤎</span>
+    <span class="heart">🍫</span>
+    <span class="heart">💕</span>
+    <span class="heart">🍫</span>
+    <span class="heart">🤎</span>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <section class="day-header">
+      <div class="day-header-content">
+        <div class="day-header-icon">🍫</div>
+        <h1>Chocolate Day</h1>
+        <p class="day-date-label">February 9th — Sweetness of Love</p>
+      </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="day-image-section">
+      <div class="day-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=900&q=85" alt="Beautiful assorted chocolates">
+      </div>
+    </div>
+
+    <!-- Primary Message -->
+    <section class="day-message-section">
+      <div class="quote-icon">❝</div>
+      <p class="message-text">
+        They say chocolate is the sweetest thing on earth — but they clearly haven't tasted a moment with you.
+        Every second beside you is richer than the finest cocoa, <em>warmer than melted chocolate on a winter night,</em>
+        and sweeter than any confection ever crafted. Today, let me wrap my love in the sweetest offering I know,
+        because you deserve a life dripping with sweetness, joy, and the kind of happiness that never melts away.
+      </p>
+      <p class="message-signature">~ Your Sweetest Admirer 🍫</p>
+    </section>
+
+    <!-- Dynamic Rotating Messages -->
+    <section class="dynamic-messages">
+      <h3 class="messages-title">Sweet Nothings</h3>
+      <div class="message-carousel" id="carousel">
+        <p class="carousel-msg active" data-index="0">
+          "Life is like a box of chocolates, but you? You're the one piece I'd choose every single time without even looking."
+        </p>
+        <p class="carousel-msg" data-index="1">
+          "You make my heart melt faster than chocolate in the sun. And just like chocolate, I can never, ever get enough of you."
+        </p>
+        <p class="carousel-msg" data-index="2">
+          "Some people need chocolate to feel happy. I just need to hear your voice, see your smile, and know that you're mine."
+        </p>
+        <p class="carousel-msg" data-index="3">
+          "Every chocolate I give you carries a hidden message: 'Thank you for making my life the sweetest story ever told.'"
+        </p>
+        <p class="carousel-msg" data-index="4">
+          "Dark, milk, or white — no chocolate compares to the richness of a love like ours. You are my forever flavor."
+        </p>
+      </div>
+      <div class="message-dots" id="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="day-nav">
+      <a href="propose-day.html" class="nav-btn btn-prev">← Propose Day</a>
+      <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
+      <a href="teddy-day.html" class="nav-btn btn-next">Teddy Day →</a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Message Rotator -->
+  <script>
+    (function() {
+      const msgs = document.querySelectorAll('.carousel-msg');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      const total = msgs.length;
+
+      function show(index) {
+        msgs.forEach(m => m.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        msgs[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+      }, 5000);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          current = parseInt(dot.dataset.index);
+          show(current);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

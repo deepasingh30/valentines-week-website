@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose Day - Valentine's Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>">
+</head>
+<body class="rose">
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg">
+    <span class="heart">🌹</span>
+    <span class="heart">❤️</span>
+    <span class="heart">🌹</span>
+    <span class="heart">💕</span>
+    <span class="heart">🌹</span>
+    <span class="heart">❤️</span>
+    <span class="heart">🌹</span>
+    <span class="heart">💕</span>
+    <span class="heart">🌹</span>
+    <span class="heart">❤️</span>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <section class="day-header">
+      <div class="day-header-content">
+        <div class="day-header-icon">🌹</div>
+        <h1>Rose Day</h1>
+        <p class="day-date-label">February 7th — The Beginning of Love</p>
+      </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="day-image-section">
+      <div class="day-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=900&q=85" alt="Beautiful red roses symbolizing deep love">
+      </div>
+    </div>
+
+    <!-- Primary Message -->
+    <section class="day-message-section">
+      <div class="quote-icon">❝</div>
+      <p class="message-text">
+        Like a rose that blooms in the first light of dawn, my love for you unfolds more beautifully with each passing moment.
+        <em>You are the most exquisite flower in the garden of my life</em> — your smile is the sunlight, your voice the gentle rain,
+        and your touch the soft breeze that makes everything bloom. Today, I give you not just a rose, but a piece of my heart
+        wrapped in every crimson petal.
+      </p>
+      <p class="message-signature">~ Forever Yours 🌹</p>
+    </section>
+
+    <!-- Dynamic Rotating Messages -->
+    <section class="dynamic-messages">
+      <h3 class="messages-title">Love Notes for You</h3>
+      <div class="message-carousel" id="carousel">
+        <p class="carousel-msg active" data-index="0">
+          "A single rose can be my garden... a single friend, my world. And you, my love, are both my garden and my entire universe."
+        </p>
+        <p class="carousel-msg" data-index="1">
+          "If I had a flower for every time you made me smile, I'd have an endless garden. But I'd still pick you over every rose that ever bloomed."
+        </p>
+        <p class="carousel-msg" data-index="2">
+          "This red rose whispers of passion — and the first tremble of a love that will never fade, not even when the last star forgets to shine."
+        </p>
+        <p class="carousel-msg" data-index="3">
+          "You don't just deserve a bouquet, you deserve a world painted in roses. Every petal is a silent poem I wrote for you in my dreams."
+        </p>
+        <p class="carousel-msg" data-index="4">
+          "They say roses have thorns, but loving you has been nothing but softness — like holding the most beautiful bloom that chose to never let go."
+        </p>
+      </div>
+      <div class="message-dots" id="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="day-nav">
+      <span class="nav-btn btn-prev disabled">← Previous Day</span>
+      <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
+      <a href="propose-day.html" class="nav-btn btn-next">Next Day →</a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Message Rotator -->
+  <script>
+    (function() {
+      const msgs = document.querySelectorAll('.carousel-msg');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      const total = msgs.length;
+
+      function show(index) {
+        msgs.forEach(m => m.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        msgs[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+      }, 5000);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          current = parseInt(dot.dataset.index);
+          show(current);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

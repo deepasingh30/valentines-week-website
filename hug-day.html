@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hug Day - Valentine's Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤗</text></svg>">
+</head>
+<body class="hug">
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg">
+    <span class="heart">🤗</span>
+    <span class="heart">💗</span>
+    <span class="heart">🤗</span>
+    <span class="heart">💕</span>
+    <span class="heart">🤗</span>
+    <span class="heart">💗</span>
+    <span class="heart">🤗</span>
+    <span class="heart">💕</span>
+    <span class="heart">🤗</span>
+    <span class="heart">💗</span>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <section class="day-header">
+      <div class="day-header-content">
+        <div class="day-header-icon">🤗</div>
+        <h1>Hug Day</h1>
+        <p class="day-date-label">February 12th — Where Words End, Arms Begin</p>
+      </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="day-image-section">
+      <div class="day-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1508407576665-2e5cb4401f44?w=900&q=85" alt="Warm loving embrace">
+      </div>
+    </div>
+
+    <!-- Primary Message -->
+    <section class="day-message-section">
+      <div class="quote-icon">❝</div>
+      <p class="message-text">
+        There are things that words simply cannot say — feelings too deep for language, emotions too wide for sentences.
+        That's what a hug is for. <em>When I hold you, I'm saying a thousand things at once:</em>
+        "I'm here." "You're safe." "I love you more than I'll ever be able to explain."
+        A hug is where two heartbeats synchronize, where the noise of the world fades,
+        and where nothing exists except us, wrapped in the most honest language of love.
+      </p>
+      <p class="message-signature">~ Always in Your Arms 🤗</p>
+    </section>
+
+    <!-- Dynamic Rotating Messages -->
+    <section class="dynamic-messages">
+      <h3 class="messages-title">Wrapped in Love</h3>
+      <div class="message-carousel" id="carousel">
+        <p class="carousel-msg active" data-index="0">
+          "A hug from you doesn't just warm my body — it reaches into the coldest corners of my soul and fills them with sunlight."
+        </p>
+        <p class="carousel-msg" data-index="1">
+          "I want to be your favorite place to rest — the arms you run to when the world is too loud, too fast, too heavy."
+        </p>
+        <p class="carousel-msg" data-index="2">
+          "The best part of any day is that moment when I finally hold you and everything that was wrong suddenly feels right again."
+        </p>
+        <p class="carousel-msg" data-index="3">
+          "Some hugs last a moment. Ours? Ours last a lifetime, even after we let go — because they live in every heartbeat that follows."
+        </p>
+        <p class="carousel-msg" data-index="4">
+          "If I could bottle the feeling of hugging you, it would cure every sadness, heal every wound, and remind the world what love truly feels like."
+        </p>
+      </div>
+      <div class="message-dots" id="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="day-nav">
+      <a href="promise-day.html" class="nav-btn btn-prev">← Promise Day</a>
+      <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
+      <a href="kiss-day.html" class="nav-btn btn-next">Kiss Day →</a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Message Rotator -->
+  <script>
+    (function() {
+      const msgs = document.querySelectorAll('.carousel-msg');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      const total = msgs.length;
+
+      function show(index) {
+        msgs.forEach(m => m.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        msgs[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+      }, 5000);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          current = parseInt(dot.dataset.index);
+          show(current);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

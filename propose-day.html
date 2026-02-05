@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propose Day - Valentine's Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+</head>
+<body class="propose">
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg">
+    <span class="heart">💍</span>
+    <span class="heart">❤️</span>
+    <span class="heart">💕</span>
+    <span class="heart">💖</span>
+    <span class="heart">💍</span>
+    <span class="heart">❤️</span>
+    <span class="heart">💕</span>
+    <span class="heart">💖</span>
+    <span class="heart">💍</span>
+    <span class="heart">❤️</span>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <section class="day-header">
+      <div class="day-header-content">
+        <div class="day-header-icon">💍</div>
+        <h1>Propose Day</h1>
+        <p class="day-date-label">February 8th — When Hearts Speak</p>
+      </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="day-image-section">
+      <div class="day-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=900&q=85" alt="Romantic proposal moment">
+      </div>
+    </div>
+
+    <!-- Primary Message -->
+    <section class="day-message-section">
+      <div class="quote-icon">❝</div>
+      <p class="message-text">
+        I've rehearsed a thousand words, written a hundred letters in my mind, and imagined this moment in every quiet second of my days.
+        But standing here before you, all those words dissolve into one simple, trembling truth:
+        <em>I love you — completely, madly, endlessly.</em>
+        You are the answer to every prayer I never knew I whispered, the dream I was too afraid to dream.
+        Will you let me spend every sunrise and sunset proving that my love for you only grows deeper?
+      </p>
+      <p class="message-signature">~ With All My Heart 💍</p>
+    </section>
+
+    <!-- Dynamic Rotating Messages -->
+    <section class="dynamic-messages">
+      <h3 class="messages-title">Words From My Heart</h3>
+      <div class="message-carousel" id="carousel">
+        <p class="carousel-msg active" data-index="0">
+          "I'm not proposing perfection — I'm proposing imperfect days made perfect because we face them together, hand in hand, heart to heart."
+        </p>
+        <p class="carousel-msg" data-index="1">
+          "Before you, I was a sentence without a period. You completed me. Today, I'm not just proposing love — I'm proposing a lifetime of 'us'."
+        </p>
+        <p class="carousel-msg" data-index="2">
+          "They say the bravest thing is to love without fear. So here I am, fearless, asking you to be my forever."
+        </p>
+        <p class="carousel-msg" data-index="3">
+          "Every love story is beautiful, but ours? Ours is my absolute favorite. Let me make it the longest, most beautiful chapter ever written."
+        </p>
+        <p class="carousel-msg" data-index="4">
+          "I choose you. Not just today, not just tomorrow, but in every universe, in every lifetime, in every version of forever that exists."
+        </p>
+      </div>
+      <div class="message-dots" id="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="day-nav">
+      <a href="rose-day.html" class="nav-btn btn-prev">← Rose Day</a>
+      <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
+      <a href="chocolate-day.html" class="nav-btn btn-next">Chocolate Day →</a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Message Rotator -->
+  <script>
+    (function() {
+      const msgs = document.querySelectorAll('.carousel-msg');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      const total = msgs.length;
+
+      function show(index) {
+        msgs.forEach(m => m.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        msgs[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+      }, 5000);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          current = parseInt(dot.dataset.index);
+          show(current);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

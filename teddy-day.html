@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teddy Day - Valentine's Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧸</text></svg>">
+</head>
+<body class="teddy">
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg">
+    <span class="heart">🧸</span>
+    <span class="heart">💛</span>
+    <span class="heart">🧸</span>
+    <span class="heart">💕</span>
+    <span class="heart">🧸</span>
+    <span class="heart">💛</span>
+    <span class="heart">🧸</span>
+    <span class="heart">💕</span>
+    <span class="heart">🧸</span>
+    <span class="heart">💛</span>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <section class="day-header">
+      <div class="day-header-content">
+        <div class="day-header-icon">🧸</div>
+        <h1>Teddy Day</h1>
+        <p class="day-date-label">February 10th — Soft Love, Warm Hearts</p>
+      </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="day-image-section">
+      <div class="day-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=900&q=85" alt="Adorable teddy bear with love">
+      </div>
+    </div>
+
+    <!-- Primary Message -->
+    <section class="day-message-section">
+      <div class="quote-icon">❝</div>
+      <p class="message-text">
+        When I can't be there to hold you close, let this little teddy be a piece of my heart that stays with you always.
+        Press it tight and feel my warmth — <em>because no distance is great enough to separate two hearts that beat as one.</em>
+        This teddy holds all my midnight thoughts of you, every whispered "I miss you," and the promise
+        that no matter where life takes us, you'll never sleep alone — my love wraps around you, always.
+      </p>
+      <p class="message-signature">~ Your Cuddle Bug 🧸</p>
+    </section>
+
+    <!-- Dynamic Rotating Messages -->
+    <section class="dynamic-messages">
+      <h3 class="messages-title">Cozy Whispers</h3>
+      <div class="message-carousel" id="carousel">
+        <p class="carousel-msg active" data-index="0">
+          "This teddy is soft, but not as soft as the way you look at me when you think I'm not watching. That look melts me every time."
+        </p>
+        <p class="carousel-msg" data-index="1">
+          "Hug this teddy when you miss me. But know this — it could never hug you back the way I would, with everything I am."
+        </p>
+        <p class="carousel-msg" data-index="2">
+          "I gave you a teddy because even stuffed animals deserve to know what it feels like to be held by someone as amazing as you."
+        </p>
+        <p class="carousel-msg" data-index="3">
+          "You make me feel safe like a childhood teddy — the kind of comfort that never fades, the kind of love that always stays."
+        </p>
+        <p class="carousel-msg" data-index="4">
+          "Every teddy I see reminds me of us — a little silly, incredibly soft, and the kind of thing you never want to let go of."
+        </p>
+      </div>
+      <div class="message-dots" id="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="day-nav">
+      <a href="chocolate-day.html" class="nav-btn btn-prev">← Chocolate Day</a>
+      <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
+      <a href="promise-day.html" class="nav-btn btn-next">Promise Day →</a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Message Rotator -->
+  <script>
+    (function() {
+      const msgs = document.querySelectorAll('.carousel-msg');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      const total = msgs.length;
+
+      function show(index) {
+        msgs.forEach(m => m.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        msgs[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+      }, 5000);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          current = parseInt(dot.dataset.index);
+          show(current);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

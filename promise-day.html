@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise Day - Valentine's Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤞</text></svg>">
+</head>
+<body class="promise">
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg">
+    <span class="heart">🤞</span>
+    <span class="heart">💜</span>
+    <span class="heart">🤞</span>
+    <span class="heart">💕</span>
+    <span class="heart">🤞</span>
+    <span class="heart">💜</span>
+    <span class="heart">🤞</span>
+    <span class="heart">💕</span>
+    <span class="heart">🤞</span>
+    <span class="heart">💜</span>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <section class="day-header">
+      <div class="day-header-content">
+        <div class="day-header-icon">🤞</div>
+        <h1>Promise Day</h1>
+        <p class="day-date-label">February 11th — Vows Written in Stars</p>
+      </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="day-image-section">
+      <div class="day-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&q=85" alt="Couple holding hands - promises of love">
+      </div>
+    </div>
+
+    <!-- Primary Message -->
+    <section class="day-message-section">
+      <div class="quote-icon">❝</div>
+      <p class="message-text">
+        Today, I don't just make promises — I carve them into the very core of who I am.
+        <em>I promise to be your calm in every storm, your laughter in every silence, and your strength when the world feels too heavy.</em>
+        I promise to love you not just on the easy days when everything is golden, but on the hard days too —
+        the days when love is a choice, and I will choose you again and again, without hesitation,
+        without condition, without end. This is my forever promise.
+      </p>
+      <p class="message-signature">~ Your Promise Keeper 🤞</p>
+    </section>
+
+    <!-- Dynamic Rotating Messages -->
+    <section class="dynamic-messages">
+      <h3 class="messages-title">My Promises to You</h3>
+      <div class="message-carousel" id="carousel">
+        <p class="carousel-msg active" data-index="0">
+          "I promise to never let you fall asleep wondering if you're loved. Every night, my last thought will be of you, and every morning, my first."
+        </p>
+        <p class="carousel-msg" data-index="1">
+          "I promise to fight for us — not against you, but beside you. Every obstacle is just another reason to hold on tighter."
+        </p>
+        <p class="carousel-msg" data-index="2">
+          "I promise to keep falling in love with you — with the person you are today, and with every beautiful version of you yet to come."
+        </p>
+        <p class="carousel-msg" data-index="3">
+          "I promise to be honest, even when it's hard. To be gentle, even when I'm tired. To be yours, even when the world tries to pull us apart."
+        </p>
+        <p class="carousel-msg" data-index="4">
+          "I promise that 50 years from now, I'll still look at you the way I did the first time — like you're the most extraordinary thing in every room."
+        </p>
+      </div>
+      <div class="message-dots" id="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="day-nav">
+      <a href="teddy-day.html" class="nav-btn btn-prev">← Teddy Day</a>
+      <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
+      <a href="hug-day.html" class="nav-btn btn-next">Hug Day →</a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Message Rotator -->
+  <script>
+    (function() {
+      const msgs = document.querySelectorAll('.carousel-msg');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+      const total = msgs.length;
+
+      function show(index) {
+        msgs.forEach(m => m.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        msgs[index].classList.add('active');
+        dots[index].classList.add('active');
+      }
+
+      setInterval(() => {
+        current = (current + 1) % total;
+        show(current);
+      }, 5000);
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          current = parseInt(dot.dataset.index);
+          show(current);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
