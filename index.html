@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentine's Week Celebration</title>
+  <title>Deepa ❤ Adi — Valentine's Week</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
 </head>
 <body>
+
+  <!-- Brand Bar -->
+  <div class="brand-bar">Deepa <span class="brand-heart">❤</span> Adi</div>
 
   <!-- Floating Hearts Background -->
   <div class="hearts-bg">
@@ -29,7 +32,8 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-heart">💕</div>
-        <h1>Valentine's Week Celebration</h1>
+        <h1>Valentine's Week</h1>
+        <p class="hero-for-label">A special message for Adi</p>
         <p class="hero-subtitle">Seven beautiful days of love, romance, and togetherness — each one a reason to celebrate the magic we share.</p>
       </div>
       <div class="hero-scroll-hint">Explore</div>
@@ -39,13 +43,13 @@
     <section class="days-section">
       <div class="section-title fade-in">
         <h2>Seven Days of Love</h2>
-        <p>Click on any day to discover its special message</p>
+        <p>Each day unlocks a special surprise just for you, Adi</p>
       </div>
 
       <div class="days-grid">
 
-        <!-- Rose Day -->
-        <a href="rose-day.html" class="day-card fade-in delay-1">
+        <!-- Rose Day — Feb 7 -->
+        <a href="rose-day.html" class="day-card fade-in delay-1" data-unlock="7">
           <div class="day-card-image">
             <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=600&q=80" alt="Rose Day - Beautiful red roses">
             <span class="day-date">Feb 7</span>
@@ -53,13 +57,13 @@
           <div class="day-card-body">
             <span class="day-icon">🌹</span>
             <h3>Rose Day</h3>
-            <p>Begin the week with the timeless beauty of roses</p>
-            <span class="card-btn">Explore</span>
+            <p>The cutest phool for my most cutest fool</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
-        <!-- Propose Day -->
-        <a href="propose-day.html" class="day-card fade-in delay-2">
+        <!-- Propose Day — Feb 8 -->
+        <a href="propose-day.html" class="day-card fade-in delay-2" data-unlock="8">
           <div class="day-card-image">
             <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&q=80" alt="Propose Day - Romantic proposal">
             <span class="day-date">Feb 8</span>
@@ -67,27 +71,27 @@
           <div class="day-card-body">
             <span class="day-icon">💍</span>
             <h3>Propose Day</h3>
-            <p>Speak the words your heart has always whispered</p>
-            <span class="card-btn">Explore</span>
+            <p>Will you be my navra? Pure love + thoda drama</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
-        <!-- Chocolate Day -->
-        <a href="chocolate-day.html" class="day-card fade-in delay-3">
+        <!-- Kalakand Day — Feb 9 -->
+        <a href="chocolate-day.html" class="day-card fade-in delay-3" data-unlock="9">
           <div class="day-card-image">
-            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&q=80" alt="Chocolate Day - Sweet chocolates">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Koderma_Kalakand.jpg" alt="Kalakand Day - Our special sweet">
             <span class="day-date">Feb 9</span>
           </div>
           <div class="day-card-body">
-            <span class="day-icon">🍫</span>
-            <h3>Chocolate Day</h3>
-            <p>Share the sweetness that makes love even sweeter</p>
-            <span class="card-btn">Explore</span>
+            <span class="day-icon">🍬</span>
+            <h3>Kalakand Day</h3>
+            <p>Because we're different, baby. Forget chocolate!</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
-        <!-- Teddy Day -->
-        <a href="teddy-day.html" class="day-card fade-in delay-4">
+        <!-- Teddy Day — Feb 10 -->
+        <a href="teddy-day.html" class="day-card fade-in delay-4" data-unlock="10">
           <div class="day-card-image">
             <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=600&q=80" alt="Teddy Day - Cute teddy bears">
             <span class="day-date">Feb 10</span>
@@ -95,13 +99,13 @@
           <div class="day-card-body">
             <span class="day-icon">🧸</span>
             <h3>Teddy Day</h3>
-            <p>A soft reminder that you're always in my heart</p>
-            <span class="card-btn">Explore</span>
+            <p>My cutest, hottest teddy — you know who you are</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
-        <!-- Promise Day -->
-        <a href="promise-day.html" class="day-card fade-in delay-5">
+        <!-- Promise Day — Feb 11 -->
+        <a href="promise-day.html" class="day-card fade-in delay-5" data-unlock="11">
           <div class="day-card-image">
             <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80" alt="Promise Day - Holding hands promise">
             <span class="day-date">Feb 11</span>
@@ -109,13 +113,13 @@
           <div class="day-card-body">
             <span class="day-icon">🤞</span>
             <h3>Promise Day</h3>
-            <p>Seal your love with promises that last forever</p>
-            <span class="card-btn">Explore</span>
+            <p>Promises that come straight from my heart</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
-        <!-- Hug Day -->
-        <a href="hug-day.html" class="day-card fade-in delay-6">
+        <!-- Hug Day — Feb 12 -->
+        <a href="hug-day.html" class="day-card fade-in delay-6" data-unlock="12">
           <div class="day-card-image">
             <img src="https://images.unsplash.com/photo-1508407576665-2e5cb4401f44?w=600&q=80" alt="Hug Day - Warm embrace">
             <span class="day-date">Feb 12</span>
@@ -123,13 +127,13 @@
           <div class="day-card-body">
             <span class="day-icon">🤗</span>
             <h3>Hug Day</h3>
-            <p>Wrap your love in the warmest embrace</p>
-            <span class="card-btn">Explore</span>
+            <p>Come here, gadhedo… I need my teddy hug</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
-        <!-- Kiss Day -->
-        <a href="kiss-day.html" class="day-card fade-in delay-7">
+        <!-- Kiss Day — Feb 13 -->
+        <a href="kiss-day.html" class="day-card fade-in delay-7" data-unlock="13">
           <div class="day-card-image">
             <img src="https://images.unsplash.com/photo-1518568740560-141631f41f42?w=600&q=80" alt="Kiss Day - Romantic kiss">
             <span class="day-date">Feb 13</span>
@@ -137,20 +141,60 @@
           <div class="day-card-body">
             <span class="day-icon">💋</span>
             <h3>Kiss Day</h3>
-            <p>The perfect ending before Valentine's Day</p>
-            <span class="card-btn">Explore</span>
+            <p>This one can't be celebrated in text only 😉</p>
+            <span class="card-btn">Open</span>
           </div>
         </a>
 
       </div>
+
+      <!-- Coming Soon Message (shown when no cards are unlocked yet) -->
+      <div class="coming-soon-msg" id="comingSoon" style="display: none;">
+        <p>Something special is coming for you, Adi...</p>
+        <p class="coming-soon-sub">The first surprise unlocks on February 7th 🌹</p>
+      </div>
+
     </section>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
       <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story ever written</p>
+      <p class="footer-brand">Deepa ❤ Adi</p>
     </footer>
 
   </div>
+
+  <!-- Date-based Card Visibility -->
+  <script>
+    (function() {
+      var today = new Date();
+      var month = today.getMonth(); // 0-indexed, Feb = 1
+      var day = today.getDate();
+      var cards = document.querySelectorAll('.day-card');
+      var comingSoon = document.getElementById('comingSoon');
+      var visibleCount = 0;
+
+      // If not February, or if Feb 14+, show ALL cards
+      if (month !== 1 || day >= 14) {
+        return; // all cards visible by default
+      }
+
+      // Cumulative unlock: cards visible from their unlock date onwards
+      cards.forEach(function(card) {
+        var unlockDay = parseInt(card.getAttribute('data-unlock'));
+        if (day < unlockDay) {
+          card.classList.add('locked');
+        } else {
+          visibleCount++;
+        }
+      });
+
+      // If before Feb 7, no cards unlocked — show coming soon
+      if (visibleCount === 0 && comingSoon) {
+        comingSoon.style.display = 'block';
+      }
+    })();
+  </script>
 
 </body>
 </html>
