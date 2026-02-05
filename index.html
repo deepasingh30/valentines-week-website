@@ -51,7 +51,7 @@
         <!-- Rose Day — Feb 7 -->
         <a href="rose-day.html" class="day-card fade-in delay-1" data-unlock="7">
           <div class="day-card-image">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=600&q=80" alt="Rose Day - Beautiful red roses">
+            <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=600&q=80" alt="Rose Day - Beautiful red roses">
             <span class="day-date">Feb 7</span>
           </div>
           <div class="day-card-body">
@@ -121,7 +121,7 @@
         <!-- Hug Day — Feb 12 -->
         <a href="hug-day.html" class="day-card fade-in delay-6" data-unlock="12">
           <div class="day-card-image">
-            <img src="https://images.unsplash.com/photo-1508407576665-2e5cb4401f44?w=600&q=80" alt="Hug Day - Warm embrace">
+            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&q=80" alt="Hug Day - Warm embrace">
             <span class="day-date">Feb 12</span>
           </div>
           <div class="day-card-body">
@@ -135,7 +135,7 @@
         <!-- Kiss Day — Feb 13 -->
         <a href="kiss-day.html" class="day-card fade-in delay-7" data-unlock="13">
           <div class="day-card-image">
-            <img src="https://images.unsplash.com/photo-1518568740560-141631f41f42?w=600&q=80" alt="Kiss Day - Romantic kiss">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600&q=80" alt="Kiss Day - Romantic kiss">
             <span class="day-date">Feb 13</span>
           </div>
           <div class="day-card-body">
@@ -173,6 +173,10 @@
       var cards = document.querySelectorAll('.day-card');
       var comingSoon = document.getElementById('comingSoon');
       var visibleCount = 0;
+
+      // PREVIEW MODE: temporarily show all cards for testing
+      // Remove this line before going live!
+      return;
 
       // If not February, or if Feb 14+, show ALL cards
       if (month !== 1 || day >= 14) {

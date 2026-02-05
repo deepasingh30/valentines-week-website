@@ -9,26 +9,15 @@
 </head>
 <body class="promise">
 
-  <!-- Brand Bar -->
   <div class="brand-bar">Deepa <span class="brand-heart">❤</span> Adi</div>
 
-  <!-- Floating Hearts -->
   <div class="hearts-bg">
-    <span class="heart">🤞</span>
-    <span class="heart">💜</span>
-    <span class="heart">🤞</span>
-    <span class="heart">💕</span>
-    <span class="heart">🤞</span>
-    <span class="heart">💜</span>
-    <span class="heart">🤞</span>
-    <span class="heart">💕</span>
-    <span class="heart">🤞</span>
-    <span class="heart">💜</span>
+    <span class="heart">🤞</span><span class="heart">💜</span><span class="heart">🤞</span><span class="heart">💕</span><span class="heart">🤞</span>
+    <span class="heart">💜</span><span class="heart">🤞</span><span class="heart">💕</span><span class="heart">🤞</span><span class="heart">💜</span>
   </div>
 
   <div class="page-wrapper">
 
-    <!-- Header -->
     <section class="day-header">
       <div class="day-header-content">
         <div class="day-header-icon">🤞</div>
@@ -37,14 +26,12 @@
       </div>
     </section>
 
-    <!-- Main Image -->
     <div class="day-image-section">
       <div class="day-image-wrapper">
         <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&q=85" alt="Couple holding hands - promises of love">
       </div>
     </div>
 
-    <!-- Primary Message -->
     <section class="day-message-section">
       <div class="quote-icon">❝</div>
       <p class="message-text">
@@ -60,70 +47,27 @@
       <p class="message-signature">~ With Love, Deepa 🤞</p>
     </section>
 
-    <!-- Dynamic Rotating Messages -->
-    <section class="dynamic-messages">
-      <h3 class="messages-title">My Promises to You, Adi</h3>
-      <div class="message-carousel" id="carousel">
-        <p class="carousel-msg active" data-index="0">
-          "I promise to hold your hand through every storm, laugh with you in every silly moment, and stick with you forever — no matter what. ❤️"
-        </p>
-        <p class="carousel-msg" data-index="1">
-          "You're my person, my home, my forever. 🤍"
-        </p>
-        <p class="carousel-msg" data-index="2">
-          "Happy Promise Day, my love ❤️🤞"
-        </p>
-      </div>
-      <div class="message-dots" id="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
+    <section class="love-notes">
+      <h3 class="notes-title">My Promises to You, Adi</h3>
+      <div class="love-notes-list">
+        <p class="love-note">I promise to hold your hand through every storm, laugh with you in every silly moment, and stick with you forever — no matter what. ❤️</p>
+        <p class="love-note">You're my person, my home, my forever. 🤍</p>
+        <p class="love-note">Happy Promise Day, my love ❤️🤞</p>
       </div>
     </section>
 
-    <!-- Navigation -->
     <nav class="day-nav">
       <a href="teddy-day.html" class="nav-btn btn-prev">← Teddy Day</a>
       <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
       <a href="hug-day.html" class="nav-btn btn-next">Hug Day →</a>
     </nav>
 
-    <!-- Footer -->
     <footer class="footer">
       <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
       <p class="footer-brand">Deepa ❤ Adi</p>
     </footer>
 
   </div>
-
-  <!-- Dynamic Message Rotator -->
-  <script>
-    (function() {
-      const msgs = document.querySelectorAll('.carousel-msg');
-      const dots = document.querySelectorAll('.dot');
-      let current = 0;
-      const total = msgs.length;
-
-      function show(index) {
-        msgs.forEach(m => m.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        msgs[index].classList.add('active');
-        dots[index].classList.add('active');
-      }
-
-      setInterval(() => {
-        current = (current + 1) % total;
-        show(current);
-      }, 5000);
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          current = parseInt(dot.dataset.index);
-          show(current);
-        });
-      });
-    })();
-  </script>
 
 </body>
 </html>

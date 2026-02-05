@@ -9,26 +9,15 @@
 </head>
 <body class="chocolate">
 
-  <!-- Brand Bar -->
   <div class="brand-bar">Deepa <span class="brand-heart">❤</span> Adi</div>
 
-  <!-- Floating Hearts -->
   <div class="hearts-bg">
-    <span class="heart">🍬</span>
-    <span class="heart">🤍</span>
-    <span class="heart">🍬</span>
-    <span class="heart">💕</span>
-    <span class="heart">🍬</span>
-    <span class="heart">🤍</span>
-    <span class="heart">🍬</span>
-    <span class="heart">💕</span>
-    <span class="heart">🍬</span>
-    <span class="heart">🤍</span>
+    <span class="heart">🍬</span><span class="heart">🤍</span><span class="heart">🍬</span><span class="heart">💕</span><span class="heart">🍬</span>
+    <span class="heart">🤍</span><span class="heart">🍬</span><span class="heart">💕</span><span class="heart">🍬</span><span class="heart">🤍</span>
   </div>
 
   <div class="page-wrapper">
 
-    <!-- Header -->
     <section class="day-header">
       <div class="day-header-content">
         <div class="day-header-icon">🍬</div>
@@ -37,14 +26,12 @@
       </div>
     </section>
 
-    <!-- Main Image -->
     <div class="day-image-section">
       <div class="day-image-wrapper">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Koderma_Kalakand.jpg" alt="Delicious Kalakand - our special sweet">
       </div>
     </div>
 
-    <!-- Primary Message -->
     <section class="day-message-section">
       <div class="quote-icon">❝</div>
       <p class="message-text">
@@ -57,70 +44,27 @@
       <p class="message-signature">~ With Love, Deepa 🍬</p>
     </section>
 
-    <!-- Dynamic Rotating Messages -->
-    <section class="dynamic-messages">
-      <h3 class="messages-title">Sweet Nothings for Adi</h3>
-      <div class="message-carousel" id="carousel">
-        <p class="carousel-msg active" data-index="0">
-          "And honestly… you're sweeter than any chocolate, softer than any mithai, and the only taste I want in my life. 🤍"
-        </p>
-        <p class="carousel-msg" data-index="1">
-          "My sweetest, my cutest, my forever happiness. ❤️"
-        </p>
-        <p class="carousel-msg" data-index="2">
-          "Happy Kalakand Day, jaan! 🤍🍬"
-        </p>
-      </div>
-      <div class="message-dots" id="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
+    <section class="love-notes">
+      <h3 class="notes-title">Sweet Nothings for Adi</h3>
+      <div class="love-notes-list">
+        <p class="love-note">And honestly… you're sweeter than any chocolate, softer than any mithai, and the only taste I want in my life. 🤍</p>
+        <p class="love-note">My sweetest, my cutest, my forever happiness. ❤️</p>
+        <p class="love-note">Happy Kalakand Day, jaan! 🤍🍬</p>
       </div>
     </section>
 
-    <!-- Navigation -->
     <nav class="day-nav">
       <a href="propose-day.html" class="nav-btn btn-prev">← Propose Day</a>
       <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
       <a href="teddy-day.html" class="nav-btn btn-next">Teddy Day →</a>
     </nav>
 
-    <!-- Footer -->
     <footer class="footer">
       <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
       <p class="footer-brand">Deepa ❤ Adi</p>
     </footer>
 
   </div>
-
-  <!-- Dynamic Message Rotator -->
-  <script>
-    (function() {
-      const msgs = document.querySelectorAll('.carousel-msg');
-      const dots = document.querySelectorAll('.dot');
-      let current = 0;
-      const total = msgs.length;
-
-      function show(index) {
-        msgs.forEach(m => m.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        msgs[index].classList.add('active');
-        dots[index].classList.add('active');
-      }
-
-      setInterval(() => {
-        current = (current + 1) % total;
-        show(current);
-      }, 5000);
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          current = parseInt(dot.dataset.index);
-          show(current);
-        });
-      });
-    })();
-  </script>
 
 </body>
 </html>

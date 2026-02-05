@@ -9,26 +9,15 @@
 </head>
 <body class="hug">
 
-  <!-- Brand Bar -->
   <div class="brand-bar">Deepa <span class="brand-heart">❤</span> Adi</div>
 
-  <!-- Floating Hearts -->
   <div class="hearts-bg">
-    <span class="heart">🤗</span>
-    <span class="heart">💛</span>
-    <span class="heart">🤗</span>
-    <span class="heart">💕</span>
-    <span class="heart">🤗</span>
-    <span class="heart">💛</span>
-    <span class="heart">🤗</span>
-    <span class="heart">💕</span>
-    <span class="heart">🤗</span>
-    <span class="heart">💛</span>
+    <span class="heart">🤗</span><span class="heart">💛</span><span class="heart">🤗</span><span class="heart">💕</span><span class="heart">🤗</span>
+    <span class="heart">💛</span><span class="heart">🤗</span><span class="heart">💕</span><span class="heart">🤗</span><span class="heart">💛</span>
   </div>
 
   <div class="page-wrapper">
 
-    <!-- Header -->
     <section class="day-header">
       <div class="day-header-content">
         <div class="day-header-icon">🤗</div>
@@ -37,14 +26,12 @@
       </div>
     </section>
 
-    <!-- Main Image -->
     <div class="day-image-section">
       <div class="day-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1508407576665-2e5cb4401f44?w=900&q=85" alt="Warm loving embrace">
+        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=900&q=85" alt="Warm loving embrace">
       </div>
     </div>
 
-    <!-- Primary Message -->
     <section class="day-message-section">
       <div class="quote-icon">❝</div>
       <p class="message-text">
@@ -57,66 +44,26 @@
       <p class="message-signature">~ With Love, Deepa 🤗</p>
     </section>
 
-    <!-- Dynamic Rotating Messages -->
-    <section class="dynamic-messages">
-      <h3 class="messages-title">Wrapped in Love</h3>
-      <div class="message-carousel" id="carousel">
-        <p class="carousel-msg active" data-index="0">
-          "Because your hugs are my peace, my comfort, my favourite place to exist. 💛"
-        </p>
-        <p class="carousel-msg" data-index="1">
-          "Come here, my love… I need my teddy hug. 🤗💛"
-        </p>
-      </div>
-      <div class="message-dots" id="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
+    <section class="love-notes">
+      <h3 class="notes-title">Wrapped in Love</h3>
+      <div class="love-notes-list">
+        <p class="love-note">Because your hugs are my peace, my comfort, my favourite place to exist. 💛</p>
+        <p class="love-note">Come here, my love… I need my teddy hug. 🤗💛</p>
       </div>
     </section>
 
-    <!-- Navigation -->
     <nav class="day-nav">
       <a href="promise-day.html" class="nav-btn btn-prev">← Promise Day</a>
       <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
       <a href="kiss-day.html" class="nav-btn btn-next">Kiss Day →</a>
     </nav>
 
-    <!-- Footer -->
     <footer class="footer">
       <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
       <p class="footer-brand">Deepa ❤ Adi</p>
     </footer>
 
   </div>
-
-  <!-- Dynamic Message Rotator -->
-  <script>
-    (function() {
-      const msgs = document.querySelectorAll('.carousel-msg');
-      const dots = document.querySelectorAll('.dot');
-      let current = 0;
-      const total = msgs.length;
-
-      function show(index) {
-        msgs.forEach(m => m.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        msgs[index].classList.add('active');
-        dots[index].classList.add('active');
-      }
-
-      setInterval(() => {
-        current = (current + 1) % total;
-        show(current);
-      }, 5000);
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          current = parseInt(dot.dataset.index);
-          show(current);
-        });
-      });
-    })();
-  </script>
 
 </body>
 </html>

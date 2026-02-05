@@ -9,26 +9,15 @@
 </head>
 <body class="rose">
 
-  <!-- Brand Bar -->
   <div class="brand-bar">Deepa <span class="brand-heart">❤</span> Adi</div>
 
-  <!-- Floating Hearts -->
   <div class="hearts-bg">
-    <span class="heart">🌹</span>
-    <span class="heart">❤️</span>
-    <span class="heart">🌹</span>
-    <span class="heart">💕</span>
-    <span class="heart">🌹</span>
-    <span class="heart">❤️</span>
-    <span class="heart">🌹</span>
-    <span class="heart">💕</span>
-    <span class="heart">🌹</span>
-    <span class="heart">❤️</span>
+    <span class="heart">🌹</span><span class="heart">❤️</span><span class="heart">🌹</span><span class="heart">💕</span><span class="heart">🌹</span>
+    <span class="heart">❤️</span><span class="heart">🌹</span><span class="heart">💕</span><span class="heart">🌹</span><span class="heart">❤️</span>
   </div>
 
   <div class="page-wrapper">
 
-    <!-- Header -->
     <section class="day-header">
       <div class="day-header-content">
         <div class="day-header-icon">🌹</div>
@@ -37,14 +26,12 @@
       </div>
     </section>
 
-    <!-- Main Image -->
     <div class="day-image-section">
       <div class="day-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=900&q=85" alt="Beautiful red roses symbolizing deep love">
+        <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=900&q=85" alt="Beautiful red roses">
       </div>
     </div>
 
-    <!-- Primary Message -->
     <section class="day-message-section">
       <div class="quote-icon">❝</div>
       <p class="message-text">
@@ -56,78 +43,29 @@
       <p class="message-signature">~ With Love, Deepa 🌹</p>
     </section>
 
-    <!-- Dynamic Rotating Messages -->
-    <section class="dynamic-messages">
-      <h3 class="messages-title">Love Notes for You, Adi</h3>
-      <div class="message-carousel" id="carousel">
-        <p class="carousel-msg active" data-index="0">
-          "The cutest phool for my most cutest fool. 🌸"
-        </p>
-        <p class="carousel-msg" data-index="1">
-          "You are my joy, my peace, my little chaos, and my forever kind of love."
-        </p>
-        <p class="carousel-msg" data-index="2">
-          "Thank you for making my world smell like roses every single day."
-        </p>
-        <p class="carousel-msg" data-index="3">
-          "I love you endlessly, jaan. ❤️"
-        </p>
-        <p class="carousel-msg" data-index="4">
-          "Happy Rose Day, my love! 🌹❤️"
-        </p>
-      </div>
-      <div class="message-dots" id="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-        <span class="dot" data-index="3"></span>
-        <span class="dot" data-index="4"></span>
+    <section class="love-notes">
+      <h3 class="notes-title">Love Notes for You, Adi</h3>
+      <div class="love-notes-list">
+        <p class="love-note">The cutest phool for my most cutest fool. 🌸</p>
+        <p class="love-note">You are my joy, my peace, my little chaos, and my forever kind of love.</p>
+        <p class="love-note">Thank you for making my world smell like roses every single day.</p>
+        <p class="love-note">I love you endlessly, jaan. ❤️</p>
+        <p class="love-note">Happy Rose Day, my love! 🌹❤️</p>
       </div>
     </section>
 
-    <!-- Navigation -->
     <nav class="day-nav">
       <span class="nav-btn btn-prev disabled">← Previous Day</span>
       <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
       <a href="propose-day.html" class="nav-btn btn-next">Next Day →</a>
     </nav>
 
-    <!-- Footer -->
     <footer class="footer">
       <p>Made with <span class="footer-heart">❤️</span> for the most beautiful love story</p>
       <p class="footer-brand">Deepa ❤ Adi</p>
     </footer>
 
   </div>
-
-  <!-- Dynamic Message Rotator -->
-  <script>
-    (function() {
-      const msgs = document.querySelectorAll('.carousel-msg');
-      const dots = document.querySelectorAll('.dot');
-      let current = 0;
-      const total = msgs.length;
-
-      function show(index) {
-        msgs.forEach(m => m.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        msgs[index].classList.add('active');
-        dots[index].classList.add('active');
-      }
-
-      setInterval(() => {
-        current = (current + 1) % total;
-        show(current);
-      }, 5000);
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          current = parseInt(dot.dataset.index);
-          show(current);
-        });
-      });
-    })();
-  </script>
 
 </body>
 </html>
