@@ -26,13 +26,13 @@
       </div>
     </section>
 
-    <div class="day-image-section">
+    <div class="day-image-section reveal">
       <div class="day-image-wrapper">
         <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&q=85" alt="Couple holding hands - promises of love">
       </div>
     </div>
 
-    <section class="day-message-section">
+    <section class="day-message-section reveal">
       <div class="quote-icon">❝</div>
       <p class="message-text">
         Happy Promise Day, baby 🤍<br><br>
@@ -47,7 +47,9 @@
       <p class="message-signature">~ With Love, Deepa 🤞</p>
     </section>
 
-    <section class="love-notes">
+    <div class="divider">✦ ❤ ✦</div>
+
+    <section class="love-notes reveal">
       <h3 class="notes-title">My Promises to You, Adi</h3>
       <div class="love-notes-list">
         <p class="love-note">I promise to hold your hand through every storm, laugh with you in every silly moment, and stick with you forever — no matter what. ❤️</p>
@@ -56,7 +58,7 @@
       </div>
     </section>
 
-    <nav class="day-nav">
+    <nav class="day-nav reveal">
       <a href="teddy-day.html" class="nav-btn btn-prev">← Teddy Day</a>
       <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
       <a href="hug-day.html" class="nav-btn btn-next">Hug Day →</a>
@@ -68,6 +70,20 @@
     </footer>
 
   </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function(el) { observer.observe(el); });
+  });
+</script>
 
 </body>
 </html>

@@ -26,13 +26,13 @@
       </div>
     </section>
 
-    <div class="day-image-section">
+    <div class="day-image-section reveal">
       <div class="day-image-wrapper">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Koderma_Kalakand.jpg" alt="Delicious Kalakand - our special sweet">
       </div>
     </div>
 
-    <section class="day-message-section">
+    <section class="day-message-section reveal">
       <div class="quote-icon">❝</div>
       <p class="message-text">
         Happy Kalakand Day, baby!
@@ -44,7 +44,9 @@
       <p class="message-signature">~ With Love, Deepa 🍬</p>
     </section>
 
-    <section class="love-notes">
+    <div class="divider">✦ ❤ ✦</div>
+
+    <section class="love-notes reveal">
       <h3 class="notes-title">Sweet Nothings for Adi</h3>
       <div class="love-notes-list">
         <p class="love-note">And honestly… you're sweeter than any chocolate, softer than any mithai, and the only taste I want in my life. 🤍</p>
@@ -53,7 +55,7 @@
       </div>
     </section>
 
-    <nav class="day-nav">
+    <nav class="day-nav reveal">
       <a href="propose-day.html" class="nav-btn btn-prev">← Propose Day</a>
       <a href="index.html" class="nav-btn btn-home">🏠 Home</a>
       <a href="teddy-day.html" class="nav-btn btn-next">Teddy Day →</a>
@@ -65,6 +67,20 @@
     </footer>
 
   </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function(el) { observer.observe(el); });
+  });
+</script>
 
 </body>
 </html>

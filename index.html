@@ -40,8 +40,8 @@
     </section>
 
     <!-- ===== DAYS GRID SECTION ===== -->
-    <section class="days-section">
-      <div class="section-title fade-in">
+    <section class="days-section reveal">
+      <div class="section-title">
         <h2>Seven Days of Love</h2>
         <p>Each day unlocks a special surprise just for you, Adi</p>
       </div>
@@ -164,6 +164,21 @@
 
   </div>
 
+  <!-- Scroll Reveal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function(el) { observer.observe(el); });
+    });
+  </script>
+
   <!-- Date-based Card Visibility -->
   <script>
     (function() {
@@ -173,10 +188,6 @@
       var cards = document.querySelectorAll('.day-card');
       var comingSoon = document.getElementById('comingSoon');
       var visibleCount = 0;
-
-      // PREVIEW MODE: temporarily show all cards for testing
-      // Remove this line before going live!
-      return;
 
       // If not February, or if Feb 14+, show ALL cards
       if (month !== 1 || day >= 14) {
